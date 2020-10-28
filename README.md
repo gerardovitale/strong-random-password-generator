@@ -9,7 +9,7 @@ The *Strong Random Password Generator* App (app.py) has been built in order to d
 * As additional info, the **password entropy** is calculated in order to show how strong is the **password generated**.
 * And finally, it has a test.py to generate 'n' password.
 
-### Structure
+## Structure
 The main function of the **Strong Random Password Generator** (app.py) is structured on 5 functions as shown below:
 1. bundle_list.py: creates a bundle (list) from which the password_generator.py takes inputs.
 2. get_input.py: gets the desired password length from the user, specifically an integer between 8 and 12.
