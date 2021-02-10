@@ -1,5 +1,4 @@
 # Strong Random Password Generator
-#### This is a first version of a python password generator. 
 ## Overview
 The *Strong Random Password Generator* App (app.py) has been built in order to deliver the first **Ironhack** project. As its name suggest, this App generates strong passwords when the length of the desired password is given. The followings are some parameters that have been taken into account:
 
