@@ -1,19 +1,19 @@
-import modules.get_input as get
-import modules.bundle_list as bl
-import modules.password_generator as generator
-import modules.check_point as check
-import modules.get_entropy as entropy
+from modules.get_input import get_input
+import modules.create_bundle_list as cbl
+from modules.password_generator import password_generator
+from modules.check_password import check_password
+from modules.calculate_password_entropy import calculate_password_entropy
 
 def app():
-    length = get.get_input()
-    bundle = bl.bundle_list(bl.UPPERCASE, bl.LOWERCASE, bl.NUMBERS, bl.SPECIAL)
+    length = get_input()
+    bundle = cbl.create_bundle_list(cbl.UPPERCASE, cbl.LOWERCASE, cbl.NUMBERS, cbl.SPECIAL)
     password = False
     while not password:
-        password = generator.password_generator(bundle, length)
-        password = check.check_point(password)
-    h = entropy.get_entropy(bundle, password)
+        password = password_generator(bundle, length)
+        password = check_password(password)
+    entropy = calculate_password_entropy(bundle, password)
     print('Your new password is: ', password)
-    print("The password entropy is: ", '%.2f' % h, "which means that the password generated is secure.")
+    print("The password entropy is: ", '%.2f' % entropy, "which means that the password generated is secure.")
     print('Note: one password is considered strong when its entropy is greater than 50')
 
 if __name__ == "__main__":

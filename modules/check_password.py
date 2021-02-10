@@ -1,7 +1,7 @@
-import modules.bundle_list as bl
+import modules.create_bundle_list as bl
 import modules.password_generator
 
-def check_point(password):
+def check_password(password):
     check_dic = {
         'uppercase': False,
         'lowercase': False,

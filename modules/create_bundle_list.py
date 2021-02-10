@@ -5,8 +5,6 @@ LOWERCASE = string.ascii_lowercase
 NUMBERS = string.digits
 SPECIAL = string.punctuation
 
-def bundle_list(*args):
-    bundle = ''
-    for c in args:
-        bundle += c
-    return list(bundle)
+def create_bundle_list(*args):
+    bundle = [c for c in args]
+    return bundle
