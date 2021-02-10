@@ -6,5 +6,7 @@ NUMBERS = string.digits
 SPECIAL = string.punctuation
 
 def create_bundle_list(*args):
-    bundle = [c for c in args]
-    return bundle
+    bundle = ''
+    for c in args:
+        bundle += c
+    return list(bundle)
